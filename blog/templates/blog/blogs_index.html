@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/blogs/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/static/blogs/css/base.css" type="text/css">
+    <link rel="stylesheet" href="/static/blogs/css/blogs_index.css" type="text/css">
+
+    <title>myblog</title>
+</head>
+<body>
+<img class="bg_foot" src="/static/blogs/images/bg_foot_1.png" alt="">
+<div class="header">
+    <div class="header-container">
+        <img src="/static/blogs/images/banner.gif" alt="">
+        <p>
+            tiger
+        </p>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-container">
+        <a href="../tiger">首页</a>
+        <a href="../tiger">联系</a>
+        <a href="../tiger">订阅</a>
+        <a href="javascript:">blogs</a>
+    </div>
+</div>
+<div class="blog-container">
+    <h1>
+        我的博客
+    </h1>
+    <hr>
+    <ul>
+         {% for article in articles %}
+            <li>
+                <a href="article/{{ article.id }}">{{ article.title }}</a>
+                <br>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+
+</body>
+</html>
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>all</title>#}
+{#    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">#}
+{##}
+{#</head>#}
+{#<body>#}
+{#<h3>list</h3>#}
+{#{% for article in articles %}#}
+{#    <a href="article/{{ article.id }}">{{ article.title }}</a>#}
+{#    <br>#}
+{#{% endfor %}#}
+{#</body>#}
+{#</html>#}

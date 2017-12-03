@@ -5,9 +5,14 @@ from . import models
 
 
 def index(request):
+    return render(request,
+                  'blog/index.html')
+
+
+def blogs_index(request):
     articles = models.Article.objects.all()
     return render(request,
-                  'blog/index.html', {'articles': articles})
+                  'blog/blogs_index.html', {'articles': articles})
 
 
 def article_page(request, article_id):
